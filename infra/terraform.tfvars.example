@@ -1,0 +1,18 @@
+application_name        = "app"
+environments            = ["dev", "prod"]
+repository_template_url = " "
+
+
+azure_backends = {
+  "dev" = {
+    resource_group  = "tf-azdevops-strg-rg"
+    storage_account = ""
+    container       = ""
+  },
+
+  "prod" = {
+    resource_group  = "tf-azdevops-strg-rg"
+    storage_account = ""
+    container       = ""
+  }
+}
