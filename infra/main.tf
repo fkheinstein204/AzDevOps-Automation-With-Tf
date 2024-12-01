@@ -1,5 +1,5 @@
 resource "azuredevops_project" "main" {
-  name        = "Agile-Project-Tf"
+  name        = "Tf-Automation-Proj"
   description = "Simple project deploy with terraform to quickly and easily create new Azure DevOps projects."
 
   visibility         = "private"

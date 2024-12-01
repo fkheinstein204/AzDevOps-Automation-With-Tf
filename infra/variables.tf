@@ -32,3 +32,10 @@ variable "azure_backends" {
 variable "repository_template_url" {
   type = string
 }
+
+variable "default_reviewers" {
+  type = list(string)
+}
+variable "minimum_number_of_reviewers" {
+  type = number
+}
