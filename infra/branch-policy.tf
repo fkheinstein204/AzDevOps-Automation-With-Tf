@@ -1,11 +1,11 @@
 
 resource "azuredevops_user_entitlement" "reviewers" {
-  count                = length(var.default_reviewers)
-  principal_name       = var.default_reviewers[count.index]
+  count                = length(var.auto_reviewer_ids)
+  principal_name       = var.auto_reviewer_ids[count.index]
   account_license_type = "basic"
 }
 
-resource "azuredevops_branch_policy_auto_reviewers" "example" {
+resource "azuredevops_branch_policy_auto_reviewers" "main" {
   project_id = azuredevops_project.main.id
 
   enabled  = true

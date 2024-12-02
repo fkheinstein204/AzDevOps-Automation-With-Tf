@@ -33,9 +33,14 @@ variable "repository_template_url" {
   type = string
 }
 
-variable "default_reviewers" {
-  type = list(string)
+variable "auto_reviewer_ids" {
+  description = "The IDs of the auto reviewers."
+  type        = list(string)
+  default     = ["user1_id", "user2_id"]
 }
+
 variable "minimum_number_of_reviewers" {
-  type = number
+  description = "The minimum number of reviewers required."
+  type        = number
+  default     = 2
 }
